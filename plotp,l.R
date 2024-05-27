@@ -11,36 +11,7 @@ data101$long <- as.numeric(data101$long)
 data99 <- st_read("C:/Users/picha/Desktop/summer/griddd/2021selected/032021r.shp")
 data99
 
-# data99$geometry
-# ggplot() +
-#   geom_sf(data = data99, fill = 'lightgrey', color = 'black', alpha = 0.5) +
-#   theme_minimal()
-# mapview(data101, xcol = "long", ycol = "lat", crs = 4326, grid = TRUE)
-
-
-
-# data101_sf <- st_as_sf(data101[120, ], coords = c("long", "lat"), crs = 4326)
-# ggplot() +
-#   geom_sf(data = data99, fill = 'lightgrey', color = 'black', alpha = 0.5) +
-#   # Highlight the first polygon
-#   geom_sf(data = data99[100, ], fill = 'red', color = 'red', alpha = 0.5) +
-#   geom_sf(data = data101_sf, color = 'red') +
-#   theme_minimal()
-
-#----------------------------------------------------------------------
-
-#"41t"	"76t"	"86t"	"92t"	"94t"	"95t"	"96t"	"97t"	"98t"
-
-# selected_stationIDs <- c("92t")
-# filtered_data101 <- data101 %>% filter(stationID %in% selected_stationIDs)
-# filtered_data101_sf <- st_as_sf(filtered_data101, coords = c("long", "lat"), crs = 4326)
-# ggplot() +
-#   geom_sf(data = data99, fill = 'lightgrey', color = 'black', alpha = 0.5) +
-#   geom_sf(data = data99[100, ], fill = 'red', color = 'red', alpha = 0.5) +
-#   geom_sf(data = filtered_data101_sf, color = 'red', size = 2) +  
-#   theme_minimal()
-
-#-----------------------------------------------------------------------
+#"41t"	"76t"	"86t"	"92t"	"94t"	"95t"	"96t"	"97t"	"98t" is station
 
 # Filter data101 to select rows with specified stationIDs
 selected_stationIDs <- c("94t", "76t", "41t", "95t", "86t", "96t", "92t", "98t", "97t")
