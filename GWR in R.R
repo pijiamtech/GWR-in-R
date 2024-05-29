@@ -45,7 +45,7 @@ data_sp <- as(data, "Spatial")
 data_sp
 
 #Create GWRmodel
-#find optimize bandwidth
+#Find optimize bandwidth
 gwr_band <-gwr.sel(pm25~emission_g+pblh+pressure+humidity+wind, data_sp, gweight = gwr.Gauss)
 gwr_band
 
@@ -71,7 +71,7 @@ library(sp)
 data2021_sp <- as(data2021, "Spatial")
 data2021_pred <- data2021[, !names(data2021) %in% c("pm25")]
 # Initialize vectors to store predicted and actual PM2.5 values
-predicted_values <- numeric(length(c(104, 28, 101, 100, 74, 102, 73, 152)))
+predicted_values <- numeric(length(c(104, 28, 101, 100, 74, 102, 73, 152))) #list station we want
 actual_values <- numeric(length(c(104, 28, 101, 100, 74, 102, 73, 152)))
 # Specific indices to loop through
 indices <- c(104, 28, 101, 100, 74, 102, 73, 152)
