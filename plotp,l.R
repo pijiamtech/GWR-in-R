@@ -22,11 +22,11 @@ filtered_data101_sf <- st_as_sf(filtered_data101, coords = c("long", "lat"), crs
 highlight_indices <- c(104, 28, 101, 74, 102, 73, 152, 100)
 # Plot the map
 ggplot() +
-  # Plot all polygons in light grey
+  # Plot all polygons in light grey (map)
   geom_sf(data = data99, fill = 'lightgrey', color = 'black', alpha = 0.5) +
-  # Highlight specific polygons in light blue
+  # Highlight specific polygons in light blue (square)
   geom_sf(data = data99[highlight_indices, ], fill = 'lightblue', color = 'lightblue', alpha = 0.5) +
-  # Plot the filtered points in red
+  # Plot the filtered points in red (station)
   geom_sf(data = filtered_data101_sf, color = 'red', size = 2) +
   theme_minimal()
 
